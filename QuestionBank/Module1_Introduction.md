@@ -50,13 +50,13 @@ Truth table: (0,0)->0, (0,1)->1, (1,0)->1, (1,1)->0
 
 ```mermaid
 graph LR
-    subgraph Single Perceptron (Fails for XOR)
+    subgraph id1 ["Single Perceptron (Fails for XOR)"]
         x1((x1)) -->|w1| S((Sum + Bias))
         x2((x2)) -->|w2| S
         S --> A[Sigmoid]
         A --> y((y))
     end
-    subgraph Multi-Layer Perceptron (Solves XOR)
+    subgraph id2 ["Multi-Layer Perceptron (Solves XOR)"]
         x1_mlp((x1)) --> h1((h1))
         x1_mlp --> h2((h2))
         x2_mlp((x2)) --> h1

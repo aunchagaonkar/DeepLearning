@@ -57,11 +57,11 @@ Logic:
 
 ```mermaid
 graph TD
-    A[Compute Gradient g_t] --> B[Update 1st Moment: m_t = beta1*m_{t-1} + (1-beta1)g_t]
-    A --> C[Update 2nd Moment: v_t = beta2*v_{t-1} + (1-beta2)g_t^2]
-    B --> D[Bias Correction: m_hat = m_t / (1 - beta1^t)]
-    C --> E[Bias Correction: v_hat = v_t / (1 - beta2^t)]
-    D --> F[Update Weights: w = w - lr * m_hat / (sqrt(v_hat) + eps)]
+    A["Compute Gradient g_t"] --> B["Update 1st Moment: m_t = beta1*m_{t-1} + (1-beta1)g_t"]
+    A --> C["Update 2nd Moment: v_t = beta2*v_{t-1} + (1-beta2)g_t^2"]
+    B --> D["Bias Correction: m_hat = m_t / (1 - beta1^t)"]
+    C --> E["Bias Correction: v_hat = v_t / (1 - beta2^t)"]
+    D --> F["Update Weights: w = w - lr * m_hat / (sqrt(v_hat) + eps)"]
     E --> F
 ```
 
